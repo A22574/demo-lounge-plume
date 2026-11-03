@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plume — лаундж в центре Казани</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Manrope:wght@400;500;600&family=Marck+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <span class="logo">Plume</span>
+    <span class="topbar-meta">ежедневно 17:00 - 02:00 · <a href="tel:+78432020202">+7 (843) 202-02-02</a></span>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="smoke" aria-hidden="true"><i></i><i></i></div>
+    <h1>Plume</h1>
+    <p class="hero-tag">лаундж в центре Казани</p>
+    <p class="hero-sub">Кальяны, тихая музыка и место, где разговор важнее телефона.</p>
+    <a class="btn" href="#booking">Забронировать стол</a>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Кальянная карта</h2>
+    <ul class="menu-list">
+      <li><span class="dish">Классика на глиняной чаше</span><span class="dots" aria-hidden="true"></span><span class="price">1 200 ₽</span></li>
+      <li><span class="dish">На чаше из красной глины, на воде</span><span class="dots" aria-hidden="true"></span><span class="price">1 400 ₽</span></li>
+      <li><span class="dish">На фрукте (апельсин, гранат)</span><span class="dots" aria-hidden="true"></span><span class="price">1 800 ₽</span></li>
+      <li><span class="dish">Дегустационный сет из 3 кальянов</span><span class="dots" aria-hidden="true"></span><span class="price">3 200 ₽</span></li>
+    </ul>
+    <p class="script-note">табаки всегда свежие, чашу меняем перед каждой забивкой</p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Как у нас вечером</h2>
+    <div class="mood">
+      <div class="mood-item">
+        <span class="mood-num">три зала</span>
+        <p>Приватная комната на шесть человек, основной зал и место у окна. Тихий свет, никаких телевизоров.</p>
+      </div>
+      <div class="mood-item">
+        <span class="mood-num">живая музыка</span>
+        <p>По пятницам и субботам - акустика и диджей-сеты. Громкость всегда под разговор.</p>
+      </div>
+      <div class="mood-item">
+        <span class="mood-num">чайная карта</span>
+        <p>Да хун пао, шу пуэр и собственные смеси. Чай завариваем при вас.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Гости о нас</h2>
+    <div class="quotes">
+      <blockquote>
+        <p>Пришли «на часок», просидели до закрытия. Кальян мягкий, персонал не навязчивый.</p>
+        <cite>Алина, гость Plume</cite>
+      </blockquote>
+      <blockquote>
+        <p>Лучшая приватная комната в городе. День рождения прошёл именно так, как хотелось.</p>
+        <cite>Руслан, бронировал зал</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section booking" id="booking">
+    <h2 class="section-title">Бронирование</h2>
+    <p class="booking-sub">Оставьте контакты - подтвердим стол в течение 15 минут в Telegram или по телефону.</p>
+    <form class="booking-form" id="bookingForm" novalidate>
+      <div class="field">
+        <label for="f-name">Имя</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-phone">Телефон</label>
+        <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+      </div>
+      <div class="field">
+        <label for="f-date">Дата и время</label>
+        <input id="f-date" name="date" type="text" placeholder="например, суббота, 21:00">
+      </div>
+      <div class="field">
+        <label for="f-guests">Гостей</label>
+        <select id="f-guests" name="guests">
+          <option>2</option><option>3</option><option>4</option><option>5</option><option>6 и больше</option>
+        </select>
+      </div>
+      <button class="btn" type="submit">Забронировать</button>
+      <p class="form-error" id="formError" role="alert" hidden>Заполните имя и телефон - без них не сможем подтвердить бронь.</p>
+    </form>
+    <div class="booking-done" id="bookingDone" hidden>
+      <span class="stamp" aria-hidden="true">Бронь принята</span>
+      <p>Заявка у нас. Перезвоним в течение 15 минут и подтвердим стол.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>Казань, ул. Пушкина, 2 · ежедневно 17:00 - 02:00</span>
+    <a href="tel:+78432020202">+7 (843) 202-02-02</a>
+    <a href="#">@plume.kzn</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
